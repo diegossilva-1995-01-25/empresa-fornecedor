@@ -44,20 +44,22 @@ public class UsuarioController {
 		
 		String mensagem = service.fazerLogout(request, response);
 		
-		
 		return ResponseEntity.ok().headers(HttpHeaders.EMPTY).body(mensagem);
 
 	}
 	
 	@PostMapping("/registrar")
-    public ResponseEntity<String> registrarUsuario(@RequestBody Usuario usuario){
+    public ResponseEntity<?> registrarUsuario(@RequestBody Usuario usuario){
 
         String mensagem = service.fazerRegistro(usuario);
         
+        Map<String, String> response = new HashMap<>();
+        response.put("message", mensagem);
+        
         if(mensagem.contains("Erro: ")) {
-        	return ResponseEntity.badRequest().body(mensagem);
+        	return ResponseEntity.badRequest().body(response);
         } else {
-        	return ResponseEntity.ok().body(mensagem);
+        	return ResponseEntity.ok().body(response);
         }
         
 

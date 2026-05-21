@@ -1,0 +1,74 @@
+.form-new {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: #dfc762;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-shadow: 1.5rem 1.5rem 2rem 0rem;
+    border-radius: 1rem;
+
+    .linha {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .linha-botoes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 25rem;
+    }
+
+    .txt {
+        border: 0;
+        /*border-bottom: 0.125rem solid black;*/
+        font-size: 2rem;
+        font-family: Titillium, sans-serif;
+        color: black;
+        margin-bottom: 4rem;
+        width: 25rem;
+        border-radius: 0.5rem;
+    }
+
+    .lbl {
+        font-size: 2rem;
+        font-family: Titillium, sans-serif;
+        color: #148163;
+    }
+
+    .green {
+        background: green;
+        color: white;
+        border-radius: 1rem;
+        border-color: transparent;
+        height: 2rem;
+        width: 6rem;
+        font-size: 1.5rem;
+    }
+
+    .green:active {
+        background: darkgreen;
+    }
+
+    .red {
+        background: red;
+        color: white;
+        border-radius: 1rem;
+        border-color: transparent;
+        height: 2rem;
+        width: 6rem;
+        font-size: 1.5rem;
+    }
+
+    .red:active {
+        background: darkred;
+    }
+
+}

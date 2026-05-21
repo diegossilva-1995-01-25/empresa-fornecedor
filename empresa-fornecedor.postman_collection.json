@@ -1,0 +1,807 @@
+{
+  "info": {
+    "_postman_id": "ea978744-d03d-469e-a44c-a08a14e63515",
+    "name": "empresa-fornecedor",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "4508988"
+  },
+  "item": [
+    {
+      "name": "Empresa",
+      "item": [
+        {
+          "name": "Empresas-Todos",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTMzOTU4OCwiZXhwIjoxNzc5MzQzMTg4fQ.eIjSgOyMaJ7WIl-Y5H36J-U6S-FYfMxvARuXSV1DpkPOak45G90R-8H858OXU3-XKLYEVzm-ZNj516pn3OQTsA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"cpf\": 39044689010\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://192.168.18.3:8080/empresa-fornecedor/empresa/todos",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "18",
+                "3"
+              ],
+              "port": "8080",
+              "path": [
+                "empresa-fornecedor",
+                "empresa",
+                "todos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Empresas-Cadastrar",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTMzOTU4OCwiZXhwIjoxNzc5MzQzMTg4fQ.eIjSgOyMaJ7WIl-Y5H36J-U6S-FYfMxvARuXSV1DpkPOak45G90R-8H858OXU3-XKLYEVzm-ZNj516pn3OQTsA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"cnpj\": 85906326000135,\r\n    \"nomeFantasia\": \"Sailors Senshi do Brasil\",\r\n    \"cep\": 80060195,\r\n    \"usuario\": {\r\n        \"cpf\": 39044689010\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://192.168.18.3:8080/empresa-fornecedor/empresa/cadastrar",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "18",
+                "3"
+              ],
+              "port": "8080",
+              "path": [
+                "empresa-fornecedor",
+                "empresa",
+                "cadastrar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Empresas-Editar",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTMzNTMxNiwiZXhwIjoxNzc5MzM4OTE2fQ.bwUWXEQ_wmHxb3YZGvYTw6VYtKzJojXBgtcQwI_X7NPQL9zPt3RFyBfGtXgHflSARonE12FEWM384QFrm0g2yg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"cnpj\": 85906326000135,\r\n    \"nomeFantasia\": \"Sailors Guerreiras do Brasil\",\r\n    \"cep\": 80060195,\r\n    \"usuario\": {\r\n        \"cpf\": 39044689010\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://192.168.18.3:8080/empresa-fornecedor/empresa/editar",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "18",
+                "3"
+              ],
+              "port": "8080",
+              "path": [
+                "empresa-fornecedor",
+                "empresa",
+                "editar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Empresas-Deletar",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTMzNTMxNiwiZXhwIjoxNzc5MzM4OTE2fQ.bwUWXEQ_wmHxb3YZGvYTw6VYtKzJojXBgtcQwI_X7NPQL9zPt3RFyBfGtXgHflSARonE12FEWM384QFrm0g2yg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"cnpj\": 85906326000135\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://192.168.18.3:8080/empresa-fornecedor/empresa/deletar",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "18",
+                "3"
+              ],
+              "port": "8080",
+              "path": [
+                "empresa-fornecedor",
+                "empresa",
+                "deletar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Empresas-Um-Registro",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTMzNTMxNiwiZXhwIjoxNzc5MzM4OTE2fQ.bwUWXEQ_wmHxb3YZGvYTw6VYtKzJojXBgtcQwI_X7NPQL9zPt3RFyBfGtXgHflSARonE12FEWM384QFrm0g2yg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"cnpj\": 85906326000135\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://192.168.18.3:8080/empresa-fornecedor/empresa/um-registro",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "18",
+                "3"
+              ],
+              "port": "8080",
+              "path": [
+                "empresa-fornecedor",
+                "empresa",
+                "um-registro"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Fornecedor",
+      "item": [
+        {
+          "name": "Fornecedor-Todos",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTMzOTU4OCwiZXhwIjoxNzc5MzQzMTg4fQ.eIjSgOyMaJ7WIl-Y5H36J-U6S-FYfMxvARuXSV1DpkPOak45G90R-8H858OXU3-XKLYEVzm-ZNj516pn3OQTsA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"cpf\": 39044689010\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://192.168.18.3:8080/empresa-fornecedor/fornecedor/todos",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "18",
+                "3"
+              ],
+              "port": "8080",
+              "path": [
+                "empresa-fornecedor",
+                "fornecedor",
+                "todos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Fornecedor-Cadastrar",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTMzNTMxNiwiZXhwIjoxNzc5MzM4OTE2fQ.bwUWXEQ_wmHxb3YZGvYTw6VYtKzJojXBgtcQwI_X7NPQL9zPt3RFyBfGtXgHflSARonE12FEWM384QFrm0g2yg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"cpfCnpj\": 74502943000159,\r\n    \"nome\": \"Capacetes Verdes do Brasil\",\r\n    \"email\": \"sgtsilva@grnhelmets.com.br\",\r\n    \"cep\": 80060195,\r\n    \"rg\": \"\",\r\n    \"nasc\": 0,\r\n    \"usuario\": {\r\n        \"cpf\": 39044689010\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://192.168.18.3:8080/empresa-fornecedor/fornecedor/cadastrar",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "18",
+                "3"
+              ],
+              "port": "8080",
+              "path": [
+                "empresa-fornecedor",
+                "fornecedor",
+                "cadastrar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Fornecedor-Editar",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTMzNTMxNiwiZXhwIjoxNzc5MzM4OTE2fQ.bwUWXEQ_wmHxb3YZGvYTw6VYtKzJojXBgtcQwI_X7NPQL9zPt3RFyBfGtXgHflSARonE12FEWM384QFrm0g2yg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"cpfCnpj\": 74502943000159,\r\n    \"nome\": \"Capacetes Verdes do Brasil\",\r\n    \"email\": \"capitaosilva@grnhelmets.com.br\",\r\n    \"cep\": 80060195,\r\n    \"rg\": \"\",\r\n    \"nasc\": 0,\r\n    \"usuario\": {\r\n        \"cpf\": 39044689010\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://192.168.18.3:8080/empresa-fornecedor/fornecedor/editar",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "18",
+                "3"
+              ],
+              "port": "8080",
+              "path": [
+                "empresa-fornecedor",
+                "fornecedor",
+                "editar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Fornecedor-Deletar",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTMzNTMxNiwiZXhwIjoxNzc5MzM4OTE2fQ.bwUWXEQ_wmHxb3YZGvYTw6VYtKzJojXBgtcQwI_X7NPQL9zPt3RFyBfGtXgHflSARonE12FEWM384QFrm0g2yg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"cpfCnpj\": 74502943000159\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://192.168.18.3:8080/empresa-fornecedor/fornecedor/deletar",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "18",
+                "3"
+              ],
+              "port": "8080",
+              "path": [
+                "empresa-fornecedor",
+                "fornecedor",
+                "deletar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Fornecedor-Um-Registro",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTMzNTMxNiwiZXhwIjoxNzc5MzM4OTE2fQ.bwUWXEQ_wmHxb3YZGvYTw6VYtKzJojXBgtcQwI_X7NPQL9zPt3RFyBfGtXgHflSARonE12FEWM384QFrm0g2yg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"cpfCnpj\": 74502943000159\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://192.168.18.3:8080/empresa-fornecedor/fornecedor/um-registro",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "18",
+                "3"
+              ],
+              "port": "8080",
+              "path": [
+                "empresa-fornecedor",
+                "fornecedor",
+                "um-registro"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Empresa-Fornecedor",
+      "item": [
+        {
+          "name": "Empresa-Fornecedor-Todos-Por-Fornecedor",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTM0MTc0MCwiZXhwIjoxNzc5MzQ1MzQwfQ.wTa0shlLb5k-W3eVk6a_UYm5yf04-zEXYakV5B09hRuCGUfMNpA78MMT7dskxtnkSwxNKiQPRZa5Wjqqyf1JtQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"cpfCnpj\": 74502943000159\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://192.168.18.3:8080/empresa-fornecedor/ef/todos-por-fornecedor",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "18",
+                "3"
+              ],
+              "port": "8080",
+              "path": [
+                "empresa-fornecedor",
+                "ef",
+                "todos-por-fornecedor"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Empresa-Fornecedor-Todos-Por-Empresa",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTM0MTc0MCwiZXhwIjoxNzc5MzQ1MzQwfQ.wTa0shlLb5k-W3eVk6a_UYm5yf04-zEXYakV5B09hRuCGUfMNpA78MMT7dskxtnkSwxNKiQPRZa5Wjqqyf1JtQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"cnpj\": 85906326000135\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://192.168.18.3:8080/empresa-fornecedor/ef/todos-por-empresa",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "18",
+                "3"
+              ],
+              "port": "8080",
+              "path": [
+                "empresa-fornecedor",
+                "ef",
+                "todos-por-empresa"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Empresa-Fornecedor-Um-Registro",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTM0MTc0MCwiZXhwIjoxNzc5MzQ1MzQwfQ.wTa0shlLb5k-W3eVk6a_UYm5yf04-zEXYakV5B09hRuCGUfMNpA78MMT7dskxtnkSwxNKiQPRZa5Wjqqyf1JtQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"empresa\": {\r\n        \"cnpj\": 85906326000135\r\n    },\r\n    \"fornecedor\": {\r\n        \"cpfCnpj\": 74502943000159\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://192.168.18.3:8080/empresa-fornecedor/ef/um-registro",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "18",
+                "3"
+              ],
+              "port": "8080",
+              "path": [
+                "empresa-fornecedor",
+                "ef",
+                "um-registro"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Deletar",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTM0MTc0MCwiZXhwIjoxNzc5MzQ1MzQwfQ.wTa0shlLb5k-W3eVk6a_UYm5yf04-zEXYakV5B09hRuCGUfMNpA78MMT7dskxtnkSwxNKiQPRZa5Wjqqyf1JtQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"empresa\": {\r\n        \"cnpj\": 85906326000135\r\n    },\r\n    \"fornecedor\": {\r\n        \"cpfCnpj\": 74502943000159\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://192.168.18.3:8080/empresa-fornecedor/ef/deletar",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "18",
+                "3"
+              ],
+              "port": "8080",
+              "path": [
+                "empresa-fornecedor",
+                "ef",
+                "deletar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cadastrar",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTM0MTc0MCwiZXhwIjoxNzc5MzQ1MzQwfQ.wTa0shlLb5k-W3eVk6a_UYm5yf04-zEXYakV5B09hRuCGUfMNpA78MMT7dskxtnkSwxNKiQPRZa5Wjqqyf1JtQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"empresa\": {\r\n        \"cnpj\": 85906326000135\r\n    },\r\n    \"fornecedor\": {\r\n        \"cpfCnpj\": 74502943000159\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://192.168.18.3:8080/empresa-fornecedor/ef/cadastrar",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "18",
+                "3"
+              ],
+              "port": "8080",
+              "path": [
+                "empresa-fornecedor",
+                "ef",
+                "cadastrar"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Teste CEP",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://viacep.com.br/ws/80060195/json/",
+          "protocol": "https",
+          "host": [
+            "viacep",
+            "com",
+            "br"
+          ],
+          "path": [
+            "ws",
+            "80060195",
+            "json",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"cpf\": 39044689010,\r\n    \"senha\": \"0000\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://192.168.18.3:8080/empresa-fornecedor/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "18",
+            "3"
+          ],
+          "port": "8080",
+          "path": [
+            "empresa-fornecedor",
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Logout",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://192.168.18.3:8080/empresa-fornecedor/api/auth/logout",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "18",
+            "3"
+          ],
+          "port": "8080",
+          "path": [
+            "empresa-fornecedor",
+            "api",
+            "auth",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Registrar",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nome\": \"Joao da Silva\",\r\n    \"cpf\": 39044689010,\r\n    \"senha\": \"0000\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://192.168.18.3:8080/empresa-fornecedor/api/auth/registrar",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "18",
+            "3"
+          ],
+          "port": "8080",
+          "path": [
+            "empresa-fornecedor",
+            "api",
+            "auth",
+            "registrar"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

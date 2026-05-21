@@ -32,11 +32,11 @@ public class FornecedorService {
 	}
 	
 	public List<Fornecedor> todosFornecedores(Usuario usuario) {
-		return repo.findAllByUsuarioCpf(usuario);
+		return repo.findAllByUsuarioCpf(usuario.getCpf());
 	}
 	
 	public Fornecedor umFornecedor(Fornecedor fornecedor) {
-		return repo.findByCpfCnpj(fornecedor);
+		return repo.findByCpfCnpj(fornecedor.getCpfCnpj());
 	}
 	
 	public void deletarFornecedor(Fornecedor fornecedor) {

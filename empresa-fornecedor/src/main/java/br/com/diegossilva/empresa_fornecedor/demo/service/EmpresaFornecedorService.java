@@ -61,15 +61,15 @@ public class EmpresaFornecedorService {
 		return repo.save(empresaFornecedor);
 	}
 	public List<EmpresaFornecedor> todosEmpresaFornecedoresPorEmpresa(Empresa empresa) {
-		return repo.findAllByEmpresaCnpj(empresa);
+		return repo.findAllByEmpresaCnpj(empresa.getCnpj());
 	}
 	
 	public List<EmpresaFornecedor> todosEmpresaFornecedoresPorFornecedor(Fornecedor fornecedor) {
-		return repo.findAllByFornecedorCpfCnpj(fornecedor);
+		return repo.findAllByFornecedorCpfCnpj(fornecedor.getCpfCnpj());
 	}
 	
 	public EmpresaFornecedor umaEmpresaFornecedor(Empresa empresa, Fornecedor fornecedor) {
-		return repo.findByEmpresaCnpjAndFornecedorCpfCnpj(empresa, fornecedor);
+		return repo.findByEmpresaCnpjAndFornecedorCpfCnpj(empresa.getCnpj(), fornecedor.getCpfCnpj());
 	}
 	
 	public void deletarEmpresaFornecedor(EmpresaFornecedor empresaFornecedor) {

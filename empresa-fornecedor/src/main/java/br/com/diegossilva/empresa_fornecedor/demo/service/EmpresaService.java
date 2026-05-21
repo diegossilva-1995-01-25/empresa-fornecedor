@@ -26,11 +26,11 @@ public class EmpresaService {
 	}
 	
 	public List<Empresa> todasEmpresas(Usuario usuario) {
-		return repo.findAllByUsuarioCpf(usuario);
+		return repo.findAllByUsuarioCpf(usuario.getCpf());
 	}
 	
 	public Empresa umaEmpresa(Empresa empresa) {
-		return repo.findByCnpj(empresa);
+		return repo.findByCnpj(empresa.getCnpj());
 	}
 	
 	public void deletarEmpresa(Empresa empresa) {

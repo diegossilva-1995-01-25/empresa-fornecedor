@@ -1,6 +1,7 @@
 package br.com.diegossilva.empresa_fornecedor.demo.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,9 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.diegossilva.empresa_fornecedor.demo.entity.Empresa;
 import br.com.diegossilva.empresa_fornecedor.demo.entity.EmpresaFornecedor;
-import br.com.diegossilva.empresa_fornecedor.demo.entity.Fornecedor;
 import br.com.diegossilva.empresa_fornecedor.demo.service.EmpresaFornecedorService;
 
 @RestController
@@ -36,13 +35,13 @@ public class EmpresaFornecedorController {
 	}
 	
 	@GetMapping("/todos-por-empresa")
-	public ResponseEntity<List<EmpresaFornecedor>> todosEmpresaFornecedoresPorEmpresa(@RequestBody EmpresaFornecedor empresaFornecedor) {
-	    return new ResponseEntity<>(service.todosEmpresaFornecedoresPorEmpresa(empresaFornecedor.getEmpresa().getCnpj()), HttpStatus.OK);
+	public ResponseEntity<List<EmpresaFornecedor>> todosEmpresaFornecedoresPorEmpresa(@RequestBody Map<String, String> request) {
+	    return new ResponseEntity<>(service.todosEmpresaFornecedoresPorEmpresa(request.get("cnpj")), HttpStatus.OK);
 	}
 
 	@GetMapping("/todos-por-fornecedor")
-	public ResponseEntity<List<EmpresaFornecedor>> todosEmpresaFornecedoresPorFornecedor(@RequestBody EmpresaFornecedor empresaFornecedor) {
-	    return new ResponseEntity<>(service.todosEmpresaFornecedoresPorFornecedor(empresaFornecedor.getFornecedor().getCpfCnpj()), HttpStatus.OK);
+	public ResponseEntity<List<EmpresaFornecedor>> todosEmpresaFornecedoresPorFornecedor(@RequestBody Map<String, String> request) {
+	    return new ResponseEntity<>(service.todosEmpresaFornecedoresPorFornecedor(request.get("cpfCnpj")), HttpStatus.OK);
 	}
 	
 	@GetMapping("/um-registro")

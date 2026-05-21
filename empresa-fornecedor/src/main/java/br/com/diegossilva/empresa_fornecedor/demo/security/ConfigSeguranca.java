@@ -57,8 +57,8 @@ public class ConfigSeguranca {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(authorize -> authorize
-                .requestMatchers(org.springframework.http.HttpMethod.POST, "/transf-sched/api/**").permitAll()
-                .requestMatchers(org.springframework.http.HttpMethod.POST, "/transf-sched/api/auth/**").permitAll()
+                .requestMatchers(org.springframework.http.HttpMethod.POST, "/empresa-fornecedor/api/**").permitAll()
+                .requestMatchers(org.springframework.http.HttpMethod.POST, "/empresa-fornecedor/api/auth/**").permitAll()
                 .anyRequest().authenticated()
             )
             .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);

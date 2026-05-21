@@ -1,0 +1,40 @@
+<div class="container">
+
+    <form class="form-login" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+        <div class="linha">
+
+            <label for="cpf" class="lbl">CPF</label>
+            <input id="cpf" type="text" class="txt" formControlName="cpf">
+            <div *ngIf="form.controls.cpf.touched && form.controls.cpf.invalid" class="error">
+                CPF is required
+            </div>
+
+        </div>
+
+        <div class="linha">
+
+            <label for="senha" class="lbl">Senha</label>
+            <input id="senha" type="password" class="txt" formControlName="senha" />
+            <div *ngIf="form.controls.senha.touched && form.controls.senha.invalid" class="error">
+                Senha is required
+            </div>
+
+        </div>
+
+        <div class="linha-botoes">
+
+            <button class="green" type="submit" [disabled]="form.invalid">
+                <span class="mdi mdi-check-bold"></span>
+            </button>
+            <button class="blue" type="button" (click)="redirectRegistrar()">
+                <span class="mdi mdi-plus"></span>
+            </button>
+
+        </div>
+
+    </form>
+      
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+</div>

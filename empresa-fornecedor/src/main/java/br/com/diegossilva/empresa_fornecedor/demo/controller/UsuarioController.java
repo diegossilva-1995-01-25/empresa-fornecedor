@@ -1,14 +1,16 @@
 package br.com.diegossilva.empresa_fornecedor.demo.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.diegossilva.empresa_fornecedor.demo.entity.Usuario;
@@ -18,7 +20,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping("/empresa-fornecedor/api/auth")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.OPTIONS})
 public class UsuarioController {
 	
 	@Autowired
@@ -26,15 +28,15 @@ public class UsuarioController {
 	
 	@PostMapping("/login")
 	public ResponseEntity<?> autenticar(@RequestBody Usuario usuario) {
-		
-		String[] msgEToken = service.fazerLogin(usuario);
-		
-		MultiValueMap<String, String> cabecalho = new LinkedMultiValueMap<>();
-		cabecalho.add("Authorization", msgEToken[1]);
-		HttpHeaders httpHeaders = HttpHeaders.copyOf(cabecalho);
-		
-		return ResponseEntity.ok().headers(httpHeaders).body(msgEToken[0]);
-
+	    
+	    String[] msgEToken = service.fazerLogin(usuario);
+	    
+	    Map<String, String> response = new HashMap<>();
+	    response.put("message", msgEToken[0]);
+	    response.put("token", msgEToken[1]);
+	    
+	    return ResponseEntity.ok().body(response);
+	    
 	}
 	
 	@PostMapping("/logout")

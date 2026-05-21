@@ -18,7 +18,7 @@ import br.com.diegossilva.empresa_fornecedor.demo.entity.Fornecedor;
 import br.com.diegossilva.empresa_fornecedor.demo.service.EmpresaFornecedorService;
 
 @RestController
-@RequestMapping("/empresa-fornecedor/empresa-fornecedor")
+@RequestMapping("/empresa-fornecedor/ef")
 @CrossOrigin(origins = "*")
 public class EmpresaFornecedorController {
 
@@ -27,40 +27,33 @@ public class EmpresaFornecedorController {
 	
 	@PostMapping("/cadastrar")
 	public ResponseEntity<EmpresaFornecedor> cadastrarEmpresaFornecedor(@RequestBody EmpresaFornecedor empresaFornecedor) {
-		ResponseEntity<EmpresaFornecedor> res;
 		try {
-			res = new ResponseEntity<EmpresaFornecedor>(service.cadastrarEmpresaFornecedor(empresaFornecedor), HttpStatus.OK);
-			return res;
+			return new ResponseEntity<>(service.cadastrarEmpresaFornecedor(empresaFornecedor), HttpStatus.OK);
 		} catch (Exception e) {
 			e.printStackTrace();
-			return new ResponseEntity<EmpresaFornecedor>(new EmpresaFornecedor(), HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<>(new EmpresaFornecedor(), HttpStatus.BAD_REQUEST);
 		}
 	}
 	
 	@GetMapping("/todos-por-empresa")
-	public ResponseEntity<List<EmpresaFornecedor>> todosEmpresaFornecedoresPorEmpresa(@RequestBody Empresa empresa) {
-		ResponseEntity<List<EmpresaFornecedor>> res = new ResponseEntity<List<EmpresaFornecedor>>(service.todosEmpresaFornecedoresPorEmpresa(empresa), HttpStatus.OK);
-		return res;
+	public ResponseEntity<List<EmpresaFornecedor>> todosEmpresaFornecedoresPorEmpresa(@RequestBody EmpresaFornecedor empresaFornecedor) {
+	    return new ResponseEntity<>(service.todosEmpresaFornecedoresPorEmpresa(empresaFornecedor.getEmpresa().getCnpj()), HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/todos-por-fornecedor")
-	public ResponseEntity<List<EmpresaFornecedor>> registrarEmpresaFornecedor(@RequestBody Fornecedor fornecedor) {
-		ResponseEntity<List<EmpresaFornecedor>> res = new ResponseEntity<List<EmpresaFornecedor>>(service.todosEmpresaFornecedoresPorFornecedor(fornecedor), HttpStatus.OK);
-		return res;
+	public ResponseEntity<List<EmpresaFornecedor>> todosEmpresaFornecedoresPorFornecedor(@RequestBody EmpresaFornecedor empresaFornecedor) {
+	    return new ResponseEntity<>(service.todosEmpresaFornecedoresPorFornecedor(empresaFornecedor.getFornecedor().getCpfCnpj()), HttpStatus.OK);
 	}
 	
 	@GetMapping("/um-registro")
-	public ResponseEntity<EmpresaFornecedor> umaEmpresaFornecedor(@RequestBody Empresa empresa, @RequestBody Fornecedor fornecedor) {
-		ResponseEntity<EmpresaFornecedor> res = new ResponseEntity<EmpresaFornecedor>(service.umaEmpresaFornecedor(empresa, fornecedor), HttpStatus.OK);
-		return res;
+	public ResponseEntity<EmpresaFornecedor> umaEmpresaFornecedor(@RequestBody EmpresaFornecedor empresaFornecedor) {
+		return new ResponseEntity<>(service.umaEmpresaFornecedor(empresaFornecedor.getEmpresa().getCnpj(), empresaFornecedor.getFornecedor().getCpfCnpj()), HttpStatus.OK);
 	}
 	
 	@PostMapping("/deletar")
-	public ResponseEntity<Void> deletarFornecedor(EmpresaFornecedor empresaFornecedor) {
-		
+	public ResponseEntity<Void> deletarEmpresaFornecedor(@RequestBody EmpresaFornecedor empresaFornecedor) {
 		service.deletarEmpresaFornecedor(empresaFornecedor);
-		return new ResponseEntity<Void>(HttpStatus.OK);
-		
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
 }

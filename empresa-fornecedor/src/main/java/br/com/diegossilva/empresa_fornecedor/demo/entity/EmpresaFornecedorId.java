@@ -6,8 +6,8 @@ import java.util.Objects;
 public class EmpresaFornecedorId implements Serializable {
     private static final long serialVersionUID = 1L;
     
-    private String empresa;  // matches Empresa's @Id type
-    private String fornecedor;  // matches Fornecedor's @Id type
+    private String empresa;      // Matches Empresa.cnpj type
+    private String fornecedor;   // Matches Fornecedor.cpfCnpj type
     
     public EmpresaFornecedorId() {}
     

@@ -26,6 +26,27 @@ export class Fornecedor {
       nasc: new FormControl(),
   });
 
+  ngOnInit(): void {
+
+    if(localStorage.getItem('fornecedor') != null && localStorage.getItem('fornecedor') != '') {
+
+      const jsonObj = JSON.parse(localStorage.getItem('fornecedor')!);
+
+      this.form.setValue({
+        cpfCnpj: jsonObj.cpfCnpj,
+        nome: jsonObj.nome,
+        email: jsonObj.email,
+        cep: jsonObj.cep,
+        rg: jsonObj.rg,
+        nasc: jsonObj.nasc,
+      });
+
+      localStorage.removeItem('fornecedor');
+
+    }
+
+  }
+
   redirectHome(): void {
     this.router.navigate(['/private/home']);
   }

@@ -11,9 +11,6 @@
       "item": [
         {
           "name": "Empresas-Todos",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "auth": {
               "type": "bearer",
@@ -25,7 +22,7 @@
                 }
               ]
             },
-            "method": "GET",
+            "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",
@@ -186,9 +183,6 @@
         },
         {
           "name": "Empresas-Um-Registro",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "auth": {
               "type": "bearer",
@@ -200,7 +194,7 @@
                 }
               ]
             },
-            "method": "GET",
+            "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",
@@ -237,21 +231,18 @@
       "item": [
         {
           "name": "Fornecedor-Todos",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "auth": {
               "type": "bearer",
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTMzOTU4OCwiZXhwIjoxNzc5MzQzMTg4fQ.eIjSgOyMaJ7WIl-Y5H36J-U6S-FYfMxvARuXSV1DpkPOak45G90R-8H858OXU3-XKLYEVzm-ZNj516pn3OQTsA",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTQyMzM2NiwiZXhwIjoxNzc5NDI2OTY2fQ.PfrsM8Wk2MpjDMSncx7EqEBMKALBIikAWcalyWtNgMEPdbZ2pk8Qio0ZrzyQ5EPuKvS_3WImTbp4oZc6XrrRLQ",
                   "type": "string"
                 }
               ]
             },
-            "method": "GET",
+            "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",
@@ -412,9 +403,6 @@
         },
         {
           "name": "Fornecedor-Um-Registro",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "auth": {
               "type": "bearer",
@@ -426,7 +414,7 @@
                 }
               ]
             },
-            "method": "GET",
+            "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",
@@ -463,9 +451,6 @@
       "item": [
         {
           "name": "Empresa-Fornecedor-Todos-Por-Fornecedor",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "auth": {
               "type": "bearer",
@@ -477,7 +462,7 @@
                 }
               ]
             },
-            "method": "GET",
+            "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",
@@ -509,9 +494,6 @@
         },
         {
           "name": "Empresa-Fornecedor-Todos-Por-Empresa",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "auth": {
               "type": "bearer",
@@ -523,7 +505,7 @@
                 }
               ]
             },
-            "method": "GET",
+            "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",
@@ -555,9 +537,6 @@
         },
         {
           "name": "Empresa-Fornecedor-Um-Registro",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "auth": {
               "type": "bearer",
@@ -569,7 +548,7 @@
                 }
               ]
             },
-            "method": "GET",
+            "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",

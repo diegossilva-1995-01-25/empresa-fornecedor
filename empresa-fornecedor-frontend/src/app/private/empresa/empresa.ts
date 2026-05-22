@@ -24,6 +24,24 @@ export class Empresa {
       cep: new FormControl(),
   });
 
+  ngOnInit(): void {
+
+    if(localStorage.getItem('empresa') != null && localStorage.getItem('empresa') != '') {
+
+      const jsonObj = JSON.parse(localStorage.getItem('empresa')!);
+
+      this.form.setValue({
+        cnpj: jsonObj.cnpj,
+        nomeFantasia: jsonObj.nomeFantasia,
+        cep: jsonObj.cep
+      });
+
+      localStorage.removeItem('empresa');
+
+    }
+    
+  }
+
   redirectHome(): void {
     this.router.navigate(['/private/home']);
   }

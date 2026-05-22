@@ -8,10 +8,10 @@ export class FornecedorService {
 
     private http = inject(HttpClient);
 
-    recuperarFornecedores(): any {
+    recuperarFornecedores(cpfEntry: string): any {
     
         const payload = {
-          cpf: localStorage.getItem('cpf'),
+          cpf: cpfEntry,
         }
     
         const headers = new HttpHeaders({
@@ -21,16 +21,8 @@ export class FornecedorService {
     
         const url = 'http://192.168.18.3:8080/empresa-fornecedor/fornecedor/todos';
     
-        this.http.post(url, payload, { headers }).subscribe({
-            next: (res) => {
-            
-                return res;
-        
-            },
-            error: (err) => {
-                console.error('Error retrieving fornecedores:', err);
-            }
-        });
+        // RETURN the observable
+        return this.http.post(url, payload, { headers });
         
       }
     

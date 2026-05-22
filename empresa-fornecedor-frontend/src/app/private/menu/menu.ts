@@ -32,6 +32,7 @@ export class Menu {
   }
 
   redirectLogin(): void {
+    localStorage.clear();
     this.router.navigate(['/login']);
   }
 

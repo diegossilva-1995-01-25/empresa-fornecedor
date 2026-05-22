@@ -6,6 +6,8 @@
         <th>CNPJ</th>
         <th>Nome Fant.</th> 
         <th>CEP</th> 
+        <th>Editar</th>
+        <th>Deletar</th>
     </tr>
   </thead>
   <tbody>
@@ -14,6 +16,16 @@
           <td>{{ empresa.cnpj }}</td>
           <td>{{ empresa.nomeFantasia }}</td>
           <td>{{ empresa.cep }}</td>
+          <td>
+            <button class="blue" type="button" (click)="redirectEditarEmpresa(empresa)">
+              <span class="mdi mdi-pencil"></span>
+            </button>
+          </td>
+          <td>
+            <button class="red" type="button" (click)="deletarEmpresa(empresa)">
+              <span class="mdi mdi-delete"></span>
+            </button>
+          </td>
         </tr>
     } @empty {
         <tr><td colspan="3">Não há empresas cadastradas.</td></tr>
@@ -30,19 +42,27 @@
         <th>Nome</th>
         <th>E-Mail</th>
         <th>CEP</th> 
-        <th>Nascimento</th>
-        <th>RG</th>
+        <th>Editar</th>
+        <th>Deletar</th>
     </tr>
   </thead>
   <tbody>
-    @for (fornecedor of fornecedores; track fornecedor.cnpj) {
+    @for (fornecedor of fornecedores; track fornecedor.cpfCnpj) {
         <tr>
           <td>{{ fornecedor.cpfCnpj }}</td>
           <td>{{ fornecedor.nome }}</td>
           <td>{{ fornecedor.email }}</td>
           <td>{{ fornecedor.cep }}</td>
-          <td>{{ fornecedor.nasc }}</td>
-          <td>{{ fornecedor.rg }}</td>
+          <td>
+            <button class="blue" type="button" (click)="redirectEditarFornecedor(fornecedor)">
+              <span class="mdi mdi-pencil"></span>
+            </button>
+          </td>
+          <td>
+            <button class="red" type="button" (click)="deletarFornecedor(fornecedor)">
+              <span class="mdi mdi-delete"></span>
+            </button>
+          </td>
         </tr>
     } @empty {
         <tr><td colspan="3">Não há fornecedores cadastrados.</td></tr>

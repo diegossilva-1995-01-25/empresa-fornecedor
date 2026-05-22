@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root', // Add this line
@@ -19,7 +20,7 @@ export class FornecedorService {
           'Authorization': 'Bearer ' + localStorage.getItem('authToken')
         });
     
-        const url = 'http://192.168.18.3:8080/empresa-fornecedor/fornecedor/todos';
+        const url = `${environment.apiUrl}/fornecedor/todos`;
     
         // RETURN the observable
         return this.http.post(url, payload, { headers });

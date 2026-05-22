@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { FornecedorService } from '../service/fornecedor.services';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-lista-fornecedores',
@@ -52,7 +53,7 @@ export class ListaFornecedores {
         'Authorization': 'Bearer ' + localStorage.getItem('authToken')
     });
 
-    const url = 'http://192.168.18.3:8080/empresa-fornecedor/fornecedor/deletar';
+    const url = `${environment.apiUrl}/fornecedor/deletar`;
 
     this.http.post(url, payload, { headers }).subscribe({
       complete: () => {

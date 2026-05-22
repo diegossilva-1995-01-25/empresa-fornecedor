@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-registrar',
@@ -47,7 +48,7 @@ export class Registrar {
       nome: this.form.value.nome,
     };
 
-    const url = 'http://192.168.18.3:8080/empresa-fornecedor/api/auth/registrar';
+    const url = `${environment.apiUrl}/api/auth/registrar`;
 
     this.http.post(url, payload).subscribe({
       next: (res) => {

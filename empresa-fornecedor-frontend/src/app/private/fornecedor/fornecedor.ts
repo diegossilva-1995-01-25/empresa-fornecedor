@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-fornecedor',
@@ -76,7 +77,7 @@ export class Fornecedor {
       'Authorization': 'Bearer ' + localStorage.getItem('authToken')
     });
 
-    const url = 'http://192.168.18.3:8080/empresa-fornecedor/fornecedor/cadastrar';
+    const url = `${environment.apiUrl}/fornecedor/cadastrar`;
 
     this.http.post(url, payload, { headers }).subscribe({
       next: (res) => {

@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { EmpresaService } from '../service/empresa.services';
 import { FornecedorService } from '../service/fornecedor.services';
 import { Router } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -65,7 +66,7 @@ export class Home implements OnInit {
         'Authorization': 'Bearer ' + localStorage.getItem('authToken')
     });
 
-    const url = 'http://192.168.18.3:8080/empresa-fornecedor/fornecedor/deletar';
+    const url = `${environment.apiUrl}/fornecedor/deletar`;
 
     this.http.post(url, payload, { headers }).subscribe({
       complete: () => {
@@ -96,7 +97,7 @@ export class Home implements OnInit {
         'Authorization': 'Bearer ' + localStorage.getItem('authToken')
     });
 
-    const url = 'http://192.168.18.3:8080/empresa-fornecedor/empresa/deletar';
+    const url = `${environment.apiUrl}/empresa/deletar`;
 
     this.http.post(url, payload, { headers }).subscribe({
       complete: () => {

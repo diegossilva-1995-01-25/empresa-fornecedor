@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -47,7 +48,7 @@ export class Login {
       senha: this.form.value.senha,
     };
 
-    const url = 'http://192.168.18.3:8080/empresa-fornecedor/api/auth/login';
+    const url = `${environment.apiUrl}/api/auth/login`;
 
     this.http.post<{ token?: string; user?: any }>(url, payload).subscribe({
       next: (res) => {

@@ -55,6 +55,7 @@ export class Login {
         if (res && res.token) {
           // Save token for later requests; consider using a dedicated AuthService
           localStorage.setItem('authToken', res.token);
+          localStorage.setItem('cpf', payload.cpf);
         }
         // navigate to app main screen
         this.redirectMenu();

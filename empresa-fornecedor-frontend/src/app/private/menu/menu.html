@@ -1,9 +1,29 @@
 <div class="menu-layout">
     <!-- Your menu/navigation here -->
-    <nav>
-    <a routerLink="/private/empresa">Empresa</a>
-    <a routerLink="/private/fornecedor">Fornecedor</a>
-    <a routerLink="/private/lista-empresas">Lista Empresas</a>
+    <nav class="header-menu">
+        <button class="green" type="button" (click)="redirectHome()">
+            <span class="mdi mdi-home"></span>
+        </button>
+
+        <button class="blue" type="button" (click)="redirectEmpresa()">
+            <span>Empresa</span>
+        </button>
+
+        <button class="blue" type="button" (click)="redirectFornecedor()">
+            <span>Fornecedor</span>
+        </button>
+
+        <button class="red" type="button" (click)="redirectListaEmpresas()">
+            <span>Lista de Empresas</span>
+        </button>
+
+        <button class="red" type="button" (click)="redirectListaFornecedores()">
+            <span>Lista de Fornecedores</span>
+        </button>
+
+        <button class="red power-off" type="button" (click)="redirectLogin()">
+            <span class="mdi mdi-power"></span>
+        </button>
     </nav>
     
     <!-- This renders the child components -->

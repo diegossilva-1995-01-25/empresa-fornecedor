@@ -6,10 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.diegossilva.empresa_fornecedor.demo.entity.Fornecedor;
@@ -18,7 +18,7 @@ import br.com.diegossilva.empresa_fornecedor.demo.service.FornecedorService;
 
 @RestController
 @RequestMapping("/empresa-fornecedor/fornecedor")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.OPTIONS})
 public class FornecedorController {
 
 	@Autowired
@@ -47,13 +47,13 @@ public class FornecedorController {
 		
 	}
 	
-	@GetMapping("/todos")
+	@PostMapping("/todos")
 	public ResponseEntity<List<Fornecedor>> todasEmpresas(@RequestBody Usuario usuario) {
 		ResponseEntity<List<Fornecedor>> res = new ResponseEntity<List<Fornecedor>>(service.todosFornecedores(usuario), HttpStatus.OK);
 		return res;
 	}
 	
-	@GetMapping("/um-registro")
+	@PostMapping("/um-registro")
 	public ResponseEntity<Fornecedor> umaEmpresa(@RequestBody Fornecedor fornecedor) {
 		ResponseEntity<Fornecedor> res = new ResponseEntity<Fornecedor>(service.umFornecedor(fornecedor), HttpStatus.OK);
 		return res;

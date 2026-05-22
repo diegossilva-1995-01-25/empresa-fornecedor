@@ -1,0 +1,53 @@
+.header-menu {
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    .green {
+        background: green;
+        color: white;
+        border-radius: 1rem;
+        border-color: transparent;
+        height: 2rem;
+        width: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .green:active {
+        background: darkgreen;
+    }
+
+    .blue {
+        background: blue;
+        color: white;
+        border-radius: 1rem;
+        border-color: transparent;
+        height: 2rem;
+        width: 10rem;
+        font-size: 1.5rem;
+    }
+
+    .blue:active {
+        background: darkblue;
+    }
+
+    .red {
+        background: red;
+        color: white;
+        border-radius: 1rem;
+        border-color: transparent;
+        height: 2rem;
+        width: 18rem;
+        font-size: 1.5rem;
+    }
+
+    .red:active {
+        background: darkred;
+    }
+
+    .power-off {
+        width: 3rem !important;
+    }
+
+}

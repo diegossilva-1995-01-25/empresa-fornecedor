@@ -1,1 +1,31 @@
-<p>empresa works!</p>
+<div class="container">
+
+  <form class="form-empresa" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="linha">
+      <label for="cnpj" class="lbl">CNPJ</label>
+      <input id="cnpj" type="text" class="txt" formControlName="cnpj" />
+    </div>
+
+    <div class="linha">
+      <label for="nomeFantasia" class="lbl">Nome Fantasia</label>
+      <input id="nomeFantasia" type="text" class="txt" formControlName="nomeFantasia" />
+    </div>
+
+    <div class="linha">
+      <label for="cep" class="lbl">CEP</label>
+      <input id="cep" type="number" class="txt" formControlName="cep" />
+    </div>
+
+    <div class="linha-botoes">
+      <button class="green" type="submit" [disabled]="form.invalid">
+        <span class="mdi mdi-content-save"></span>
+      </button>
+      <button class="red" type="button" (click)="redirectHome()">
+        <span class="mdi mdi-close"></span>
+      </button>
+    </div>
+
+  </form>
+
+</div>

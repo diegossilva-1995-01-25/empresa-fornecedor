@@ -1,1 +1,53 @@
-<p>home works!</p>
+<div class="form-home">
+
+<table class="table">
+  <thead>
+    <tr>
+        <th>CNPJ</th>
+        <th>Nome Fant.</th> 
+        <th>CEP</th> 
+    </tr>
+  </thead>
+  <tbody>
+    @for (empresa of empresas; track empresa.cnpj) {
+        <tr>
+          <td>{{ empresa.cnpj }}</td>
+          <td>{{ empresa.nomeFantasia }}</td>
+          <td>{{ empresa.cep }}</td>
+        </tr>
+    } @empty {
+        <tr><td colspan="3">Não há empresas cadastradas.</td></tr>
+    }
+  </tbody>
+</table>
+
+<br>
+
+<table class="table">
+  <thead>
+    <tr>
+        <th>CPF/CNPJ</th>
+        <th>Nome</th>
+        <th>E-Mail</th>
+        <th>CEP</th> 
+        <th>Nascimento</th>
+        <th>RG</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (fornecedor of fornecedores; track fornecedor.cnpj) {
+        <tr>
+          <td>{{ fornecedor.cpfCnpj }}</td>
+          <td>{{ fornecedor.nome }}</td>
+          <td>{{ fornecedor.email }}</td>
+          <td>{{ fornecedor.cep }}</td>
+          <td>{{ fornecedor.nasc }}</td>
+          <td>{{ fornecedor.rg }}</td>
+        </tr>
+    } @empty {
+        <tr><td colspan="3">Não há fornecedores cadastrados.</td></tr>
+    }
+  </tbody>
+</table>
+
+</div>

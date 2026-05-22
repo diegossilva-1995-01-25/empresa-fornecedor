@@ -16,9 +16,9 @@ Servir como teste em processo seletivo para ingresso em uma empresa, a saber, a 
 ### Back-End
 1. Java v21;
 2. SpringBoot v4.0.6;
-	2.1. Spring Web;
-	2.2. Spring Security;
-	2.3 Spring JPA entre outros.
+	- Spring Web;
+	- Spring Security;
+	- Spring JPA entre outros.
 
 ### Banco de Dados
 - PostgreSQL v12
@@ -40,6 +40,4 @@ O que está pendente?
 	- Tela para consulta de lista de fornecedores por cpf/cnpj;
 	- Tela para consulta de lista de fornecedores por nome;
 - Back-End:
-	- Endpoint para consulta de lista de empresas por nome;
-	- Endpoint para consulta de lista de fornecedores por nome;
 	- Classes de teste JUnit para as services.

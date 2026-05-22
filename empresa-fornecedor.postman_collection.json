@@ -17,7 +17,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTMzOTU4OCwiZXhwIjoxNzc5MzQzMTg4fQ.eIjSgOyMaJ7WIl-Y5H36J-U6S-FYfMxvARuXSV1DpkPOak45G90R-8H858OXU3-XKLYEVzm-ZNj516pn3OQTsA",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTQ3Mzc5NywiZXhwIjoxNzc5NDc3Mzk3fQ.uC7Mq2NdptuciqQ1qIgkJdA-JiuAdvH1atjfGYFOXTs--UOwu3oq0A680f0Pi2fQJS6OfaCv5aFS0h_4uIBvWA",
                   "type": "string"
                 }
               ]
@@ -47,6 +47,49 @@
                 "empresa-fornecedor",
                 "empresa",
                 "todos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Empresas-Todos-Por-Nome",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTQ3Mzc5NywiZXhwIjoxNzc5NDc3Mzk3fQ.uC7Mq2NdptuciqQ1qIgkJdA-JiuAdvH1atjfGYFOXTs--UOwu3oq0A680f0Pi2fQJS6OfaCv5aFS0h_4uIBvWA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nomeFantasia\": \"Tony\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://192.168.18.3:8080/empresa-fornecedor/empresa/todos-por-nome",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "18",
+                "3"
+              ],
+              "port": "8080",
+              "path": [
+                "empresa-fornecedor",
+                "empresa",
+                "todos-por-nome"
               ]
             }
           },
@@ -237,7 +280,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTQyMzM2NiwiZXhwIjoxNzc5NDI2OTY2fQ.PfrsM8Wk2MpjDMSncx7EqEBMKALBIikAWcalyWtNgMEPdbZ2pk8Qio0ZrzyQ5EPuKvS_3WImTbp4oZc6XrrRLQ",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTQ3Mzc5NywiZXhwIjoxNzc5NDc3Mzk3fQ.uC7Mq2NdptuciqQ1qIgkJdA-JiuAdvH1atjfGYFOXTs--UOwu3oq0A680f0Pi2fQJS6OfaCv5aFS0h_4uIBvWA",
                   "type": "string"
                 }
               ]
@@ -267,6 +310,49 @@
                 "empresa-fornecedor",
                 "fornecedor",
                 "todos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Fornecedor-Todos-Por-Nome",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzOTA0NDY4OTAxMCIsImlhdCI6MTc3OTQ3Mzc5NywiZXhwIjoxNzc5NDc3Mzk3fQ.uC7Mq2NdptuciqQ1qIgkJdA-JiuAdvH1atjfGYFOXTs--UOwu3oq0A680f0Pi2fQJS6OfaCv5aFS0h_4uIBvWA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nome\": \"Tsuyu\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://192.168.18.3:8080/empresa-fornecedor/fornecedor/todos-por-nome",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "18",
+                "3"
+              ],
+              "port": "8080",
+              "path": [
+                "empresa-fornecedor",
+                "fornecedor",
+                "todos-por-nome"
               ]
             }
           },

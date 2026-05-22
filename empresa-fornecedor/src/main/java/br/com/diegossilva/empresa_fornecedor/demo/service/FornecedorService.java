@@ -35,6 +35,10 @@ public class FornecedorService {
 		return repo.findAllByUsuarioCpf(usuario.getCpf());
 	}
 	
+	public List<Fornecedor> todosFornecedoresPorNome(Fornecedor fornecedor) {
+		return repo.findByNomeContaining(fornecedor.getNome());
+	}
+	
 	public Fornecedor umFornecedor(Fornecedor fornecedor) {
 		return repo.findByCpfCnpj(fornecedor.getCpfCnpj());
 	}

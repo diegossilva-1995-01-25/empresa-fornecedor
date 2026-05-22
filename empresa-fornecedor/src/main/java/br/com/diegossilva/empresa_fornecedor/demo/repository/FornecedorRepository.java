@@ -12,6 +12,8 @@ public interface FornecedorRepository extends JpaRepository<Fornecedor, String> 
 
 	List<Fornecedor> findAllByUsuarioCpf(String cpf);
 	
+	List<Fornecedor> findByNomeContaining(String nome);
+	
 	Fornecedor findByCpfCnpj(String cpfCnpj);
 	
 }

@@ -46,6 +46,12 @@ public class EmpresaController {
 		return res;
 	}
 	
+	@PostMapping("/todos-por-nome")
+	public ResponseEntity<List<Empresa>> todasEmpresasPorNome(@RequestBody Empresa empresa) {
+		ResponseEntity<List<Empresa>> res = new ResponseEntity<List<Empresa>>(service.todasEmpresasPorNome(empresa), HttpStatus.OK);
+		return res;
+	}
+	
 	@PostMapping("/um-registro")
 	public ResponseEntity<Empresa> umaEmpresa(@RequestBody Empresa empresa) {
 		ResponseEntity<Empresa> res = new ResponseEntity<Empresa>(service.umaEmpresa(empresa), HttpStatus.OK);

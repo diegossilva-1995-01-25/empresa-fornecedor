@@ -12,6 +12,8 @@ public interface EmpresaRepository extends JpaRepository<Empresa, String> {
 	
 	List<Empresa> findAllByUsuarioCpf(String cpf);
 	
+	List<Empresa> findByNomeFantasiaContaining(String nomeFantasia);
+	
 	Empresa findByCnpj(String cnpj);
 	
 }

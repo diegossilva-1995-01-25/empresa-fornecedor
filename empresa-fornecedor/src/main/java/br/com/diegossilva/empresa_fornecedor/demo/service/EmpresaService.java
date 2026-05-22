@@ -29,6 +29,10 @@ public class EmpresaService {
 		return repo.findAllByUsuarioCpf(usuario.getCpf());
 	}
 	
+	public List<Empresa> todasEmpresasPorNome(Empresa empresa) {
+		return repo.findByNomeFantasiaContaining(empresa.getNomeFantasia());
+	}
+	
 	public Empresa umaEmpresa(Empresa empresa) {
 		return repo.findByCnpj(empresa.getCnpj());
 	}

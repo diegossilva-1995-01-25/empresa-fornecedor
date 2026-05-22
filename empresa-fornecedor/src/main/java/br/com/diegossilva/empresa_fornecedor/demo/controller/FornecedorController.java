@@ -48,8 +48,14 @@ public class FornecedorController {
 	}
 	
 	@PostMapping("/todos")
-	public ResponseEntity<List<Fornecedor>> todasEmpresas(@RequestBody Usuario usuario) {
+	public ResponseEntity<List<Fornecedor>> todosFornecedores(@RequestBody Usuario usuario) {
 		ResponseEntity<List<Fornecedor>> res = new ResponseEntity<List<Fornecedor>>(service.todosFornecedores(usuario), HttpStatus.OK);
+		return res;
+	}
+	
+	@PostMapping("/todos-por-nome")
+	public ResponseEntity<List<Fornecedor>> todosFornecedoresPorNome(@RequestBody Fornecedor fornecedor) {
+		ResponseEntity<List<Fornecedor>> res = new ResponseEntity<List<Fornecedor>>(service.todosFornecedoresPorNome(fornecedor), HttpStatus.OK);
 		return res;
 	}
 	

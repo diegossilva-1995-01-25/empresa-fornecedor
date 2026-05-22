@@ -1,1 +1,38 @@
-<p>lista-fornecedores works!</p>
+<div class="form-lista-fornecedores">
+
+    <table class="table">
+    <thead>
+      <tr>
+          <th>CPF/CNPJ</th>
+          <th>Nome</th>
+          <th>E-Mail</th>
+          <th>CEP</th> 
+          <th>Editar</th>
+          <th>Deletar</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (fornecedor of fornecedores; track fornecedor.cpfCnpj) {
+          <tr>
+            <td>{{ fornecedor.cpfCnpj }}</td>
+            <td>{{ fornecedor.nome }}</td>
+            <td>{{ fornecedor.email }}</td>
+            <td>{{ fornecedor.cep }}</td>
+            <td>
+              <button class="blue" type="button" (click)="redirectEditarFornecedor(fornecedor)">
+                <span class="mdi mdi-pencil"></span>
+              </button>
+            </td>
+            <td>
+              <button class="red" type="button" (click)="deletarFornecedor(fornecedor)">
+                <span class="mdi mdi-delete"></span>
+              </button>
+            </td>
+          </tr>
+      } @empty {
+          <tr><td colspan="3">Não há fornecedores cadastrados.</td></tr>
+      }
+    </tbody>
+  </table>
+
+</div>

@@ -35,9 +35,6 @@ O que está pendente?
 	- Parte de tela para inclusão de fornecedores à empresa selecionada;
 	- O mesmo vale para incluir empresas ao fornecedor selecionado;
 	- Tela para consulta de lista de empresas por nome;
-	- Tela para consulta de lista de empresas por cnpj;
-	- Tela para consulta de lista de empresas por nome;
-	- Tela para consulta de lista de fornecedores por cpf/cnpj;
 	- Tela para consulta de lista de fornecedores por nome;
 - Back-End:
 	- Classes de teste JUnit para as services.

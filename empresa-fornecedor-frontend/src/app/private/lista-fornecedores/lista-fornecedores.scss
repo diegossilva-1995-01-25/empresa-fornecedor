@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 4rem;
-    width: 30rem;
+    width: 60rem;
     margin-left: auto;
     margin-right: auto;
     background: #dfc762;
@@ -12,6 +12,21 @@
     padding-bottom: 2rem;
     box-shadow: 1.5rem 1.5rem 2rem 0rem;
     border-radius: 1rem;
+
+    .table {
+
+        background-color: white;
+
+        th, td {
+            padding: 0.5rem;
+        }
+
+        th {
+            background-color: black;
+            color: white;
+        }
+
+    }
 
     .linha {
         display: flex;
@@ -69,6 +84,20 @@
 
     .blue:active {
         background: darkblue;
+    }
+
+    .red {
+        background: red;
+        color: white;
+        border-radius: 1rem;
+        border-color: transparent;
+        height: 2rem;
+        width: 6rem;
+        font-size: 1.5rem;
+    }
+
+    .red:active {
+        background: darkred;
     }
 
 }
